@@ -1,0 +1,209 @@
+[
+    {
+        "timestamp": "2023-10-20 13:44:09.217770",
+        "messageID": "5fc456b6-9381-48dc-8614-6cda4595daff",
+        "sessionID": "1697809449200",
+        "text": "Hi!\n\nAt Tenant Evaluation, safeguarding your personal information is our top priority. We kindly request your consent to use your personal information, which may include data such as your name, email address, etc.\n\n\nView Terms and Conditions\n\n\n**Do you agree to our terms and conditions?**",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:11.471238",
+        "messageID": "520fe96a-dd2f-4b3e-bdb8-9e6b2d87527a",
+        "sessionID": "1697809449200",
+        "text": "yesd",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:11.942965",
+        "messageID": "353bc82f-33c0-4f11-b904-eea1a93200d3",
+        "sessionID": "1697809449200",
+        "text": "Thank you for agreeing to our [Terms and Conditions](https://support.tenantevaluation.com/support/solutions/articles/65000185349). Please keep in mind not to share any sensitive information.\n\nIf you'd like to reconsider your decision, just type **\"settings\"** in the chat.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:11.943217",
+        "messageID": "3b46bce4-feab-4c13-9516-368847c4f989",
+        "sessionID": "1697809449200",
+        "text": " Hi! My name is Eva\n\n from TenantEV I am here to help you in any doubt realted to your application process",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:11.943316",
+        "messageID": "97dcd3b7-1b2f-40b7-97d8-e01ab17cb0fb",
+        "sessionID": "1697809449200",
+        "text": "How can I help you?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:20.099272",
+        "messageID": "15fa78a1-d4b6-4d00-8e1b-a46ab9979f3d",
+        "sessionID": "1697809449200",
+        "text": "I need to edit my application",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:37.507268",
+        "messageID": "acda701e-f816-4be9-972c-b2a95d6925a3",
+        "sessionID": "1697809449200",
+        "text": "For better assistance with any editing-related concerns, please reach out to our support team by creating a ticket on this session. Please provide detailed information, so that our skilled technical agents can offer you effective solutions and guidance. To initiate a ticket, simply type ''Ticket''.",
+        "elements": null,
+        "user": "AI",
+        "feedback": true
+    },
+    {
+        "timestamp": "2023-10-20 13:44:37.507660",
+        "messageID": "d7823878-d553-4290-b145-0d2947b0c8fd",
+        "sessionID": "1697809449200",
+        "text": "Do you have any more questions I can help you with?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:44:59.935982",
+        "messageID": "7b640a8d-3101-4e03-9aeb-1067522c7f05",
+        "sessionID": "1697809449200",
+        "text": "I need to change a document",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:45:34.238992",
+        "messageID": "6398a87a-72c6-4983-9eb1-fc309391230f",
+        "sessionID": "1697809449200",
+        "text": "To change a document, please follow these steps:\n\n1. Log in to your TenantEv account at [https://tenantev.com/](https://tenantev.com/).\n2. Click on \"View or Resume my application(s)\".\n3. Select your application ID number.\n4. If documents are pending, you will see a message stating \"You have some tasks pending to be completed\".\n5. Click on the \"Pending\" tab.\n6. Find the document you want to change and click on the \"Upload Now\" button next to it.\n7. Select the new document you want to upload and click on \"Upload Now\" again.\n8. Drag or browse the new document from your desktop/computer or click on the browse button on your mobile device to select the document.\n9. Once uploaded, the system will replace the old document with the new one.\n\nPlease note that you can only change documents that are still pending review. If a document has already been reviewed, you will not be able to change it. If you have any further questions or need assistance, please feel free to reach out to us at support@tenantevaluation.com.",
+        "elements": null,
+        "user": "AI",
+        "feedback": true
+    },
+    {
+        "timestamp": "2023-10-20 13:45:34.239823",
+        "messageID": "987117bd-f751-4007-abda-046701ee7932",
+        "sessionID": "1697809449200",
+        "text": "Do you have any more questions I can help you with?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:45:49.744441",
+        "messageID": "4e67aa8b-d5bf-4929-a5ef-0e23c7b86c87",
+        "sessionID": "1697809449200",
+        "text": "yes",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:45:50.197391",
+        "messageID": "da195339-84c9-42c4-a6d6-8eb8bc90491b",
+        "sessionID": "1697809449200",
+        "text": "What else can I help you with?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:46:12.476765",
+        "messageID": "2e1b0651-14b3-4a90-9015-a18623b202b7",
+        "sessionID": "1697809449200",
+        "text": "I need to change my vehicle registration",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:46:29.224025",
+        "messageID": "703cf68f-69b3-434e-a8f2-4aef4e26f1d5",
+        "sessionID": "1697809449200",
+        "text": "To change your vehicle registration, you will need to contact the Department of Motor Vehicles (DMV) or the equivalent authority in your region. They will provide you with the necessary information and guide you through the process of updating your vehicle registration. If you require any further assistance or have any other questions, please feel free to create a ticket by typing \"Ticket\" in this session. Our support team will be happy to assist you.",
+        "elements": null,
+        "user": "AI",
+        "feedback": true
+    },
+    {
+        "timestamp": "2023-10-20 13:46:29.224735",
+        "messageID": "d30580b5-51a0-44cd-8e95-bde4fe7bc2ad",
+        "sessionID": "1697809449200",
+        "text": "Do you have any more questions I can help you with?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:46:53.374780",
+        "messageID": "125d5f81-88a5-49c7-9daa-a2445d826c4b",
+        "sessionID": "1697809449200",
+        "text": "no",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:47:00.839708",
+        "messageID": "4f6efa95-d208-422d-9c8b-546c81f77cfb",
+        "sessionID": "1697809449200",
+        "text": "Thank you so much for reaching out to us with your questions. It was a pleasure assisting you today! If you have any more doubts or need further assistance in the future, please don't hesitate to reach out to TenantEV directly. They will be more than happy to help you. Have a wonderful day! Goodbye!",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:47:00.840271",
+        "messageID": "a7b184ef-7c53-41ed-86f8-65f91e70e70a",
+        "sessionID": "1697809449200",
+        "text": "Please rate this interaction",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:47:10.557844",
+        "messageID": "0a5c6398-e9e7-4b01-80ab-1d15d7fce182",
+        "sessionID": "1697809449200",
+        "text": "positive",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:47:10.929637",
+        "messageID": "e93a6c03-9102-4700-bfa0-e057c481f8c8",
+        "sessionID": "1697809449200",
+        "text": "We greatly value your thoughts. Thank you for taking the time to share your feedback with us.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:47:26.492647",
+        "messageID": "58458c83-b439-4316-97d4-4ffb59ae3c3f",
+        "sessionID": "1697809449200",
+        "text": "end",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 13:47:26.769552",
+        "messageID": "c062f864-2d26-459e-99dd-57a67dd7fcfb",
+        "sessionID": "1697809449200",
+        "text": "Session Ended",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    }
+]

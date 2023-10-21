@@ -1,0 +1,752 @@
+[
+    {
+        "timestamp": "2023-10-20 16:28:07.895652",
+        "messageID": "bd57c7fc-753f-429c-a66b-e91d274375db",
+        "sessionID": "1697819287884",
+        "text": "Hi!\n\nAt Tenant Evaluation, safeguarding your personal information is our top priority. We kindly request your consent to use your personal information, which may include data such as your name, email address, etc.\n\n\nView Terms and Conditions\n\n\n**Do you agree to our terms and conditions?**",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:07.896576",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes, I do",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No, I do not",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:10.898439",
+        "messageID": "c1883738-a992-4286-b7dd-fa26190f69aa",
+        "sessionID": "1697819287884",
+        "text": "yes",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:10.898818",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:11.461419",
+        "messageID": "0fe4f190-691a-4250-aad1-0d7cf563000c",
+        "sessionID": "1697819287884",
+        "text": "Thank you for agreeing to our [Terms and Conditions](https://support.tenantevaluation.com/support/solutions/articles/65000185349). Please keep in mind not to share any sensitive information.\n\nIf you'd like to reconsider your decision, just type **\"settings\"** in the chat.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:11.461896",
+        "messageID": "f647e7d6-91b1-424c-b375-441295e38f54",
+        "sessionID": "1697819287884",
+        "text": " Hi! My name is Eva\n\n from TenantEV I am here to help you in any doubt realted to your application process",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:11.462060",
+        "messageID": "731ddfc8-541e-429c-9d06-f12426ee4e2a",
+        "sessionID": "1697819287884",
+        "text": "How can I help you?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:11.462200",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:15.372456",
+        "messageID": "85de417f-0909-4957-be2a-cc4e34acfc6b",
+        "sessionID": "1697819287884",
+        "text": "ticket",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:15.372837",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:23.640977",
+        "messageID": "b02a0dbb-fb27-4ebb-8908-ef1b566c3fa5",
+        "sessionID": "1697819287884",
+        "text": "Would you like to create a ticket in this chat session?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:23.641353",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes, I do",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No, I do not",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:27.848694",
+        "messageID": "418df5ef-01ec-43a7-9527-3e8f209f128d",
+        "sessionID": "1697819287884",
+        "text": "yes",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:27.849069",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:28.109697",
+        "messageID": "461b9467-f1ca-4f0c-a2b8-da533865e801",
+        "sessionID": "1697819287884",
+        "text": "Please enter any **additional information you'd like to share**. If you prefer not to share more information, simply type **\"No\"**.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:28.110185",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:33.141213",
+        "messageID": "c2d9909f-4a61-448d-aac5-0780c5ac9631",
+        "sessionID": "1697819287884",
+        "text": "test",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:33.141604",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:33.141843",
+        "messageID": "fc1b5fbc-3f9d-47e6-a3b6-8a91b185f3ee",
+        "sessionID": "1697819287884",
+        "text": "Please type your **name**",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:33.142103",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:36.441612",
+        "messageID": "7e615b6c-935a-4614-8c45-a3f6a282b236",
+        "sessionID": "1697819287884",
+        "text": "test",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:36.441951",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:36.442208",
+        "messageID": "a609713b-c7ce-4e67-b281-a51f1c99d0fa",
+        "sessionID": "1697819287884",
+        "text": "Now, please type a valid application number. If you do not have one yet or do not know it , just type No.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:36.442485",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:48.497252",
+        "messageID": "ad2c1ea6-6636-4491-8616-73c4973fe655",
+        "sessionID": "1697819287884",
+        "text": "no",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:48.497636",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:48.498166",
+        "messageID": "460ba2f4-7fcd-4947-a7b0-41ad9ce8b34b",
+        "sessionID": "1697819287884",
+        "text": "Now, please type a valid application number. If you do not have one yet or do not know it , just type No.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:48.498470",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:59.928801",
+        "messageID": "edde7bda-7998-48e3-9698-70ea2be06fee",
+        "sessionID": "1697819287884",
+        "text": "1234",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:59.929181",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:59.929514",
+        "messageID": "0f3fb5ae-f92d-448d-b0bd-5bfa85dc1f50",
+        "sessionID": "1697819287884",
+        "text": "**Application ID:**\n\n\n1234\n\n \n\n\nIs that correct?\n",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:28:59.929811",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "Cancel",
+                "value": "Cancel",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:04.877335",
+        "messageID": "50488ba1-e889-4c7d-ba36-1deb52160c62",
+        "sessionID": "1697819287884",
+        "text": "yes",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:04.877675",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:05.242308",
+        "messageID": "c31f1e0f-c4fb-47e7-b611-ffbe56064a02",
+        "sessionID": "1697819287884",
+        "text": "Please provide a valid **email address**.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:05.242751",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:24.519799",
+        "messageID": "fc6df8c7-c120-4d55-a0dd-326a0b7f102a",
+        "sessionID": "1697819287884",
+        "text": "avasquez+test@tenantevaluation.com",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:24.520195",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:24.520754",
+        "messageID": "27c1538a-38b0-44ad-9983-0de3ccd4b32a",
+        "sessionID": "1697819287884",
+        "text": "Let's take a time to review the email you provided to ensure we can get in touch with you later:\n\n\n**Registered email**\navasquez+test@tenantevaluation.com \n\n\nIs this email correct?\n",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:24.521083",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "Cancel",
+                "value": "Cancel",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:37.030543",
+        "messageID": "bc943805-5e88-4d75-9872-86cc71bccd02",
+        "sessionID": "1697819287884",
+        "text": "yes",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:37.030935",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:37.394959",
+        "messageID": "a141eb7c-e24b-4253-a15d-c9348786519f",
+        "sessionID": "1697819287884",
+        "text": "Creating the ticket...",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:38.437512",
+        "messageID": "2f8b2d1e-cf32-4569-adab-eec29bbb9c49",
+        "sessionID": "1697819287884",
+        "text": "Ticket created succesfully with Ticket ID #227955\n\n . Please review avasquez+test@tenantevaluation.com\n\nTicket created succesfully with Ticket ID #227955. Please review avasquez+test@tenantevaluation.com to confirm the creation of the ticket. Our team will get in touch with you shortly.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:38.437938",
+        "messageID": "8804157f-4b44-40d2-bcc8-5c78e7110ad5",
+        "sessionID": "1697819287884",
+        "text": "Do you have any more questions I can help you with?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:29:38.438160",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes, I do",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No, I do not",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:31:49.882760",
+        "messageID": "ad0c8210-d0dd-4a5d-ac6c-30f49c700b7a",
+        "sessionID": "1697819287884",
+        "text": "I want to create a ticket",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:31:49.883126",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:31:56.634627",
+        "messageID": "eae187d4-813e-4484-8f23-19dc8292875b",
+        "sessionID": "1697819287884",
+        "text": "Would you like to create a ticket in this chat session?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:31:56.634940",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes, I do",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No, I do not",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:03.691901",
+        "messageID": "8cb551ea-2294-431a-811a-fc2138389dbb",
+        "sessionID": "1697819287884",
+        "text": "no",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:03.692297",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:04.006065",
+        "messageID": "a292009e-c41a-4fa7-b850-cce5ca036873",
+        "sessionID": "1697819287884",
+        "text": "Do you have any more questions I can help you with?",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:04.006339",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "Yes",
+                "value": "Yes, I do",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "No",
+                "value": "No, I do not",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:10.526310",
+        "messageID": "f6c8e304-acc6-41e1-862d-126bbb9f4d6d",
+        "sessionID": "1697819287884",
+        "text": "no",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:10.526587",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:17.266337",
+        "messageID": "7e6f731f-9cc2-474d-a86e-153bba9bdea2",
+        "sessionID": "1697819287884",
+        "text": "Thank you so much for reaching out to us with your questions today. I'm happy that I could assist you with your concerns. If you have any more doubts or need further assistance, please don't hesitate to contact us at TenantEV. We're here to help you in any way we can. Goodbye and have a great day!",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:17.266833",
+        "messageID": "4b8478c1-f916-4b3f-9927-d6ada0f1c98e",
+        "sessionID": "1697819287884",
+        "text": "Please rate this interaction",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:17.267162",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": ":smiley: Positive",
+                "value": "Positive",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": ":neutral_face: Neutral",
+                "value": "Neutral",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": ":cry: Bad",
+                "value": "Bad",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:25.359342",
+        "messageID": "a826e7eb-22cb-4025-ab4f-78b899d7c6b5",
+        "sessionID": "1697819287884",
+        "text": "positive",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:25.359737",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:25.784715",
+        "messageID": "173391db-5b91-4422-8bbb-ad5353329b52",
+        "sessionID": "1697819287884",
+        "text": "We greatly value your thoughts. Thank you for taking the time to share your feedback with us.",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:25.785012",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": [
+            {
+                "type": "button",
+                "label": "End",
+                "value": "End",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            },
+            {
+                "type": "button",
+                "label": "Resume",
+                "value": "Resume",
+                "backgroundColor": "#000000",
+                "textColor": "#ffffff"
+            }
+        ],
+        "user": "listen_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:32.282128",
+        "messageID": "f550f46e-f8aa-41f0-8517-d608855fff4e",
+        "sessionID": "1697819287884",
+        "text": "end",
+        "elements": null,
+        "user": "USER",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:32.282508",
+        "messageID": null,
+        "sessionID": "1697819287884",
+        "text": null,
+        "elements": null,
+        "user": "ai_signal",
+        "feedback": false
+    },
+    {
+        "timestamp": "2023-10-20 16:32:32.564171",
+        "messageID": "5da552eb-176a-41a5-b387-10527012bf15",
+        "sessionID": "1697819287884",
+        "text": "Session Ended",
+        "elements": null,
+        "user": "AI",
+        "feedback": false
+    }
+]

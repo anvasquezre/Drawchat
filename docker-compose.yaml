@@ -1,0 +1,127 @@
+version: "3.9"
+
+services:
+  dashboard:
+    build:
+      context: ./chatbot-metrics
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 8051:8051
+    environment:
+      - CHATBOT_METRICS_STAGE=prod
+      - API_URI=http://chatlog:8001/api/v1
+      - API_TOKEN=foo
+    networks:
+      - chat
+
+  chatlog:
+    build:
+      context: ./chatbot-chatlog
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 8001:8000
+    environment:
+      - CHATBOT_CHATLOG_STAGE=prod
+      - MONGO_CHATLOG_DB_USERNAME=nonroot
+      - MONGO_CHATLOG_DB_PASSWORD=secret
+      - MONGO_CHATLOG_DB_NAME=chatlog
+      - MONGO_CHATLOG_DB_HOST=mongodb
+      - MONGO_CHATLOG_DB_PORT=27017
+      - MONGO_CHATLOG_COLLECTION_MESSAGES=messages
+      - MONGO_CHATLOG_COLLECTION_SESSIONS=sessions
+      - MONGO_CHATLOG_COLLECTION_FEEDBACK=feedback
+      - MONGO_CHATLOG_COLLECTION_TICKETS=tickets
+      - API_KEY=foo
+      - ALG=HS512
+    networks:
+      - chat
+
+  qdrant:
+    restart: unless-stopped
+    image: qdrant/qdrant:v1.2.2
+    ports:
+      - 6333:6333
+      - 6334:6334
+    volumes:
+      - ./qdrant/storage:/qdrant/storage
+
+
+  knowlegebase:
+    build:
+      context: ./chatbot-knowledge-base
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 8002:8000
+    environment:
+      - CHATBOT_KNOWLEDGEBASE_STAGE=prod
+      - API_KEY=foo
+      - ALG=HS512
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - QDRANT_GRPC_PORT=6334
+      - QDRANT_USE_HTTPS=false
+      - OPENAI_API_KEY=foo
+      - MODEL=gpt-3.5-turbo-16k
+      - COLLECTIONS=["index"]
+    networks:
+      - chat
+
+  mongodb:
+    image: mongo:latest
+    restart: unless-stopped
+    command: [--auth]
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb/:/docker-entrypoint-initdb.d/
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    env_file:
+      - ./mongodb/.env
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=root
+    - MONGO_INITDB_ROOT_PASSWORD=secret
+    - MONGO_INITDB_DATABASE=admin
+    - MONGO_CHATLOG_USERNAME=nonroot
+    - MONGO_CHATLOG_PASSWORD=secret
+    - MONGO_CHATLOG_DB_NAME=chatlog
+    - MONGO_CHATLOG_COLLECTION_MESSAGES=messages
+    - MONGO_CHATLOG_COLLECTION_SESSIONS=sessions
+    - MONGO_CHATLOG_COLLECTION_FEEDBACK=feedback
+    - MONGO_CHATLOG_COLLECTION_TICKETS=tickets
+    networks:
+      - chat
+
+  backend:
+    build:
+      context: ./chatbot-backend
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 8000:8000
+    environment:
+      - CHATBOT_KB_URL=http://knowlegebase:8002/api/v1
+      - CHATBOT_KB_TOKEN=foo
+      - ORIGINS=["http://127.0.0.1:8000","http://localhost:8000","http://localhost:3000"]
+      - FRESHDESK_API_KEY=foo
+      - FRESHDESK_API_DOMAIN=foo
+      - FRESHDESK_API_PASSWORD=foo
+      - CHATBOT_CHATLOG_URL=http://chatlog:8001/api/v1
+      - CHATBOT_CHATLOG_TOKEN=foo
+    networks:
+      - chat
+
+
+networks:
+  chat:
+    driver: bridge
+
+volumes:
+  mongodb:
+  mongodb_config:
+
+
+

@@ -1,0 +1,9 @@
+fastapi==0.103.1
+pandas==2.1.0
+pydantic==2.3.0
+pydantic_settings==2.0.3
+PyJWT==2.8.0
+pymongo==4.5.0
+wordcloud==1.9.2
+uvicorn==0.23.2
+semver==3.0.1

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chatbot Editor | Tenant Evaluation</title>
+    <meta
+      name="description"
+      content="Simple library for flow programming. Drawflow allows you to create data flows easily and quickly."
+    />
+  </head>
+  <body>
+    <script src="drawflow.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./drawflow.min.css" />
+    <link rel="stylesheet" type="text/css" href="beautiful.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+    <header>
+      <h2>Drawflow</h2>
+      <div class="them-edit-link">
+        <a
+          href="https://jerosoler.github.io/drawflow-theme-generator/"
+          target="_blank"
+          >🎨</a
+        >
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="col" id="menu-container">
+        
+
+      </div>
+      <div class="col-right">
+        <div class="menu">
+          <ul>
+            <li
+              onclick="editor.changeModule('Home'); changeModule(event);"
+              class="selected"
+            >
+              Home
+            </li>
+          </ul>
+        </div>
+        <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="btn-export" id="btn-json" onclick="exportGraph();">JSON</div>
+          <div class="btn-export" onclick="publishWorkflow();">Publish</div>
+          <div class="btn-clear" onclick="editor.import(fetchFlow('prod'));">Reset</div>
+          <div class="btn-export" id="btn-text-editor" onclick="showTextAreaPopup();">Text Editor</div>
+      
+          <div class="btn-lock">
+            <i
+              id="lock"
+              class="fas fa-lock"
+              onclick="editor.editor_mode='fixed'; changeMode('lock');"
+            ></i>
+            <i
+              id="unlock"
+              class="fas fa-lock-open"
+              onclick="editor.editor_mode='edit'; changeMode('unlock');"
+              style="display: none"
+            ></i>
+          </div>
+          <div class="bar-zoom">
+            <i class="fas fa-search-minus" onclick="editor.zoom_out()"></i>
+            <i class="fas fa-search" onclick="editor.zoom_reset()"></i>
+            <i class="fas fa-search-plus" onclick="editor.zoom_in()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      import { initTextNode, addTextNode } from './components/textNode.js';
+      window.addTextNode = addTextNode;
+
+      import { initStartNode, addStartNode } from './components/startNode.js';
+      window.addStartNode = addStartNode;
+
+      import { initEndNode, addEndNode } from './components/endNode.js';
+      window.addEndNode = addEndNode;
+
+      import { initListenerNode, addListenerNode } from './components/listenerNode.js';
+      window.addListenerNode = addListenerNode;
+
+      import { initDeciderNode, addDeciderNode } from './components/deciderNode.js';
+      window.addDeciderNode = addDeciderNode;
+
+      import { initIntentNode, addIntentNode } from './components/intentNode.js';
+      window.addIntentNode = addIntentNode;
+
+      import { initAINode, addAINode } from './components/aiNode.js';
+      window.addAINode = addAINode;
+
+      import { initQANode, addQANode } from './components/qaNode.js';
+      window.addQANode = addQANode;
+
+      import { initValidatorNode, addValidatorNode } from './components/validatorNode.js';
+      window.addValidatorNode = addValidatorNode;
+
+      import { initSetValueNode, addSetValueNode } from './components/setValueNode.js';
+      window.addSetValueNode = addSetValueNode;
+
+      import { initCounterNode, addCounterNode } from './components/counterNode.js';
+      window.addCounterNode = addCounterNode;
+
+      import { initIfNode, addIfNode } from './components/ifNode.js';
+      window.addIfNode = addIfNode;
+
+      initStartNode();
+      initTextNode();
+      initListenerNode();
+      initDeciderNode();
+      initIntentNode();
+      initEndNode();
+      initAINode();
+      initQANode();
+      initValidatorNode();
+      initSetValueNode();
+      initCounterNode();
+      initIfNode();
+    </script>
+    <script>
+      // Call the fetchLatestFlow function
+      
+      function fetchLatestFlow() {
+        try {
+          const api_url = "http://localhost:8000/api/v1/workflow/fetch";
+          const xhr = new XMLHttpRequest();
+      
+          xhr.open("GET", api_url, false); // Use false for synchronous request
+      
+          xhr.send();
+      
+          if (xhr.status === 200) {
+            const jsonData = JSON.parse(xhr.responseText);
+  
+            return jsonData;
+          } else {
+            throw new Error(`Failed to fetch the latest flow: ${xhr.status} ${xhr.statusText}`);
+          }
+        } catch (error) {
+          console.error(error);
+          return null; // Return null in case of an error
+        }
+      };
+
+      function fetchFlow(fetchType) {
+        try {
+          const api_url = `http://localhost:8000/api/v1/workflow/fetch/${fetchType}`;
+          const xhr = new XMLHttpRequest();
+      
+          xhr.open("GET", api_url, false); // Use false for synchronous request
+      
+          xhr.send();
+      
+          if (xhr.status === 200) {
+            const jsonData = JSON.parse(xhr.responseText);
+      
+            return jsonData;
+          } else {
+            throw new Error(`Failed to fetch the flow (${fetchType}): ${xhr.status} ${xhr.statusText}`);
+          }
+        } catch (error) {
+          console.error(error);
+          return null; // Return null in case of an error
+        }
+      }
+
+      let dataToImport = fetchFlow("prod");
+      console.log(dataToImport);
+      console.log(typeof dataToImport);
+      var id = document.getElementById("drawflow");
+      const editor = new Drawflow(id);
+      editor.reroute = true;
+      editor.reroute_fix_curvature = true;
+      editor.zoom_max = 1.6;
+      editor.zoom_min = 0.2;
+      editor.zoom_value = 0.1;
+      editor.zoom = 1;
+      editor.start();
+      editor.import(dataToImport);
+
+      // Events!
+      editor.on("nodeCreated", function (id) {
+        console.log("Node created " + id);
+        autosaveWorkflow();
+      });
+
+      editor.on("nodeRemoved", function (id) {
+        console.log("Node removed " + id);
+        autosaveWorkflow();
+      });
+
+      editor.on("nodeSelected", function (id) {
+        console.log("Node selected " + id);
+      });
+
+      editor.on("moduleCreated", function (name) {
+        console.log("Module Created " + name);
+      });
+
+      editor.on("moduleChanged", function (name) {
+        console.log("Module Changed " + name);
+      });
+
+      editor.on("connectionCreated", function (connection) {
+        console.log("Connection created");
+        autosaveWorkflow();
+        console.log(connection);
+      });
+
+      editor.on("connectionRemoved", function (connection) {
+        console.log("Connection removed");
+        autosaveWorkflow();
+        console.log(connection);
+      });
+
+      editor.on("mouseMove", function (position) {
+        console.log("Position mouse x:" + position.x + " y:" + position.y);
+      });
+
+      editor.on("nodeMoved", function (id) {
+        console.log("Node moved " + id);
+        autosaveWorkflow();
+      });
+
+      editor.on("zoom", function (zoom) {
+        console.log("Zoom level " + zoom);
+      });
+
+      editor.on("translate", function (position) {
+        console.log("Translate x:" + position.x + " y:" + position.y);
+      });
+
+      editor.on("addReroute", function (id) {
+        console.log("Reroute added " + id);
+        autosaveWorkflow();
+      });
+
+      editor.on("removeReroute", function (id) {
+        console.log("Reroute removed " + id);
+        autosaveWorkflow();
+      });
+
+      /* AutoSave */
+
+      /* Mouse and Touch Actions */
+
+      var elements = document.getElementsByClassName("drag-drawflow");
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("touchend", drop, false);
+        elements[i].addEventListener("touchmove", positionMobile, false);
+        elements[i].addEventListener("touchstart", drag, false);
+      }
+
+      var mobile_item_selec = "";
+      var mobile_last_move = null;
+      function positionMobile(ev) {
+        mobile_last_move = ev;
+      }
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        if (ev.type === "touchstart") {
+          mobile_item_selec = ev.target
+            .closest(".drag-drawflow")
+            .getAttribute("data-node");
+        } else {
+          ev.dataTransfer.setData("node", ev.target.getAttribute("data-node"));
+        }
+      }
+
+      function drop(ev) {
+        if (ev.type === "touchend") {
+          var parentdrawflow = document
+            .elementFromPoint(
+              mobile_last_move.touches[0].clientX,
+              mobile_last_move.touches[0].clientY
+            )
+            .closest("#drawflow");
+          if (parentdrawflow != null) {
+            addNodeToDrawFlow(
+              mobile_item_selec,
+              mobile_last_move.touches[0].clientX,
+              mobile_last_move.touches[0].clientY
+            );
+          }
+          mobile_item_selec = "";
+        } else {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("node");
+          addNodeToDrawFlow(data, ev.clientX, ev.clientY);
+        }
+      }
+
+      function addNodeToDrawFlow(name, pos_x, pos_y) {
+        if (editor.editor_mode === "fixed") {
+          return false;
+        }
+        pos_x =
+          pos_x *
+            (editor.precanvas.clientWidth /
+              (editor.precanvas.clientWidth * editor.zoom)) -
+          editor.precanvas.getBoundingClientRect().x *
+            (editor.precanvas.clientWidth /
+              (editor.precanvas.clientWidth * editor.zoom));
+        pos_y =
+          pos_y *
+            (editor.precanvas.clientHeight /
+              (editor.precanvas.clientHeight * editor.zoom)) -
+          editor.precanvas.getBoundingClientRect().y *
+            (editor.precanvas.clientHeight /
+              (editor.precanvas.clientHeight * editor.zoom));
+
+        switch (name) {
+          case "textNode":
+            window.addTextNode(editor,pos_x,pos_y)
+            break;
+          case "startNode":
+            window.addStartNode(editor,pos_x,pos_y)
+            break;
+          case "endNode":
+            window.addEndNode(editor,pos_x,pos_y)
+            break;
+          case "listenerNode":
+            window.addListenerNode(editor,pos_x,pos_y)
+            break;
+          case "deciderNode":
+            window.addDeciderNode(editor,pos_x,pos_y)
+            break;
+          case "intentNode":
+            window.addIntentNode(editor,pos_x,pos_y)
+            break;
+          case "aiNode":
+            window.addAINode(editor,pos_x,pos_y)
+            break;
+          default:
+          case "qaNode":
+            window.addQANode(editor,pos_x,pos_y)
+            break;
+          case "validatorNode":
+            window.addValidatorNode(editor,pos_x,pos_y)
+            break;
+          case "setValueNode":
+            window.addSetValueNode(editor,pos_x,pos_y)
+            break;
+          case "counterNode":
+            window.addCounterNode(editor,pos_x,pos_y)
+            break;
+          case "ifNode":
+            window.addIfNode(editor,pos_x,pos_y)
+            break;
+
+        }
+      }
+
+      var transform = "";
+      function showpopup(e) {
+        e.target.closest(".drawflow-node").style.zIndex = "9999";
+        e.target.children[0].style.display = "block";
+        //document.getElementById("modalfix").style.display = "block";
+
+        //e.target.children[0].style.transform = 'translate('+translate.x+'px, '+translate.y+'px)';
+        transform = editor.precanvas.style.transform;
+        editor.precanvas.style.transform = "";
+        editor.precanvas.style.left = editor.canvas_x + "px";
+        editor.precanvas.style.top = editor.canvas_y + "px";
+        console.log(transform);
+
+        //e.target.children[0].style.top  =  -editor.canvas_y - editor.container.offsetTop +'px';
+        //e.target.children[0].style.left  =  -editor.canvas_x  - editor.container.offsetLeft +'px';
+        editor.editor_mode = "fixed";
+      }
+
+      function closemodal(e) {
+        e.target.closest(".drawflow-node").style.zIndex = "2";
+        e.target.parentElement.parentElement.style.display = "none";
+        //document.getElementById("modalfix").style.display = "none";
+        editor.precanvas.style.transform = transform;
+        editor.precanvas.style.left = "0px";
+        editor.precanvas.style.top = "0px";
+        editor.editor_mode = "edit";
+      }
+
+      function changeModule(event) {
+        var all = document.querySelectorAll(".menu ul li");
+        for (var i = 0; i < all.length; i++) {
+          all[i].classList.remove("selected");
+        }
+        event.target.classList.add("selected");
+      }
+
+      function changeMode(option) {
+        //console.log(lock.id);
+        if (option == "lock") {
+          lock.style.display = "none";
+          unlock.style.display = "block";
+        } else {
+          lock.style.display = "block";
+          unlock.style.display = "none";
+        }
+      }
+    </script>
+
+    <script>
+      /*
+      // Get a reference to the description div
+      var descriptionDiv = document.getElementById("description");
+
+      // Get a reference to the element you want to click on
+      var element = document.querySelector(".drag-drawflow");
+
+      // Add a click event listener to the element
+      element.addEventListener("click", function () {
+        // Toggle the display of the description div
+        if (descriptionDiv.style.display === "none") {
+          descriptionDiv.style.display = "block";
+        } else {
+          descriptionDiv.style.display = "none";
+        }
+      });
+      */
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>
+      function exportGraph() {
+        // Assuming you have a variable 'editor' that contains your JSON data
+        const data = JSON.stringify(editor.export(), null, 4);
+
+        // Store the 'requests' object in a variable
+        const requests = data;
+
+        // Use 'requests' for further processing if needed
+        console.log(requests);
+
+        // You can also display the JSON data using Swal.fire
+        // Create a new Swal instance
+        const swalInstance = Swal.fire({
+          title: "Export",
+          html: `<pre><code>${JSON.stringify(
+            editor.export(),
+            null,
+            4
+          )}</code></pre>`,
+          showCancelButton: true,
+          confirmButtonText: "Copy to Clipboard",
+          cancelButtonText: "Close",
+          allowOutsideClick: true,
+          preConfirm: () => {
+            // Copy the JSON content to the clipboard using Clipboard.js
+            const clipboard = new ClipboardJS(".swal2-confirm", {
+              text: () => JSON.stringify(editor.export(), null, 4),
+            });
+
+            clipboard.on("success", () => {
+              Swal.fire(
+                "Copied!",
+                "The JSON content has been copied to the clipboard.",
+                "success"
+              );
+              clipboard.destroy();
+            });
+
+            clipboard.on("error", () => {
+              Swal.fire(
+                "Error",
+                "Failed to copy the JSON content to the clipboard.",
+                "error"
+              );
+            });
+          },
+        });
+      }
+      function autosaveWorkflow() {
+        try {
+          const api_url = "http://localhost:8000/api/v1/workflow/autosave";
+          // TODO SAVE URL AS ENV
+          // Create a JSON payload from the editor.export() result
+          const requestBody = JSON.stringify(editor.export(), null, 4);
+      
+          // Define the fetch options
+          const options = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: requestBody,
+          };
+      
+          // Make the POST request
+          fetch(api_url, options)
+            .then((response) => {
+              if (response.ok) {
+                console.log("Workflow autosaved successfully!");
+              } else {
+                throw new Error(`Failed to autosave workflow: ${response.status} ${response.statusText}`);
+              }
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      function publishWorkflow() {
+        try {
+          const api_url = "http://localhost:8000/api/v1/workflow/publish";
+          
+          // Create a JSON payload from the editor.export() result
+          const requestBody = JSON.stringify(editor.export(), null, 4);
+      
+          // Define the fetch options
+          const options = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: requestBody,
+          };
+      
+          // Make the POST request
+          fetch(api_url, options)
+            .then((response) => {
+              if (response.ok) {
+                console.log("Workflow published successfully!");
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Success',
+                  text: 'Workflow published successfully!',
+                });
+              } else {
+                throw new Error(`Failed to autosave workflow: ${response.status} ${response.statusText}`);
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: `Error: ${error.message}`,
+                });
+                
+              }
+            })
+            .catch((error) => {
+              console.error(error);
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: `Error: ${error.message}`,
+              });
+            });
+        } catch (error) {
+          console.error(error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: `Error: ${error.message}`,
+          });
+        }
+      }
+
+      function convertToHashtable(jsonData) {
+        const hashtable = {};
+        for (const key in jsonData) {
+          if (jsonData.hasOwnProperty(key)) {
+            hashtable[key] = jsonData[key];
+          }
+        }
+        return hashtable;
+      }
+
+      function showTextAreaPopup() {
+        Swal.fire({
+            title: 'Enter Text',
+            input: 'textarea',
+            inputAttributes: {
+                rows: 10,
+                cols: 50,
+                placeholder: 'Enter text here...'
+            },
+            showCancelButton: true,
+            confirmButtonText: 'Copy Text',
+            showLoaderOnConfirm: true,
+            allowOutsideClick: true,
+            preConfirm: (text) => {
+              // Copy the JSON content to the clipboard using Clipboard.js
+              const clipboard = new ClipboardJS(".swal2-confirm", {
+                text: () => text,
+              });
+  
+              clipboard.on("success", () => {
+                Swal.fire(
+                  "Copied!",
+                  "Text has been copied to the clipboard.",
+                  "success"
+                );
+                clipboard.destroy();
+              });
+  
+              clipboard.on("error", () => {
+                Swal.fire(
+                  "Error",
+                  "Failed to copy the text content to the clipboard.",
+                  "error"
+                );
+              });
+            },
+          });
+        }
+    </script>
+    </body>
+</html>

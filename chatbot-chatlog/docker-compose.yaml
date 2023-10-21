@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  chatlog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 8001:8000
+    environment:
+      - CHATBOT_CHATLOG_STAGE=prod
+      - MONGO_CHATLOG_DB_USERNAME=
+      - MONGO_CHATLOG_DB_PASSWORD=
+      - MONGO_CHATLOG_DB_HOST=
+      - MONGO_CHATLOG_DB_PORT=27017
+      - MONGO_CHATLOG_DB_NAME=chatlog
+      - MONGO_CHATLOG_COLLECTION_MESSAGES=messages
+      - MONGO_CHATLOG_COLLECTION_SESSIONS=sessions
+      - MONGO_CHATLOG_COLLECTION_FEEDBACK=feedback
+      - MONGO_CHATLOG_COLLECTION_TICKETS=tickets
+      - API_KEY=
+      - ALG=HS512

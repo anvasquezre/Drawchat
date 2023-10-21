@@ -1,0 +1,12 @@
+matplotlib==3.8.0
+pandas==2.1.1
+plotly==5.17.0
+pydantic==2.3.0
+pydantic_settings==2.0.3
+Requests==2.31.0
+streamlit==1.26.0
+streamlit_option_menu==0.3.6
+wordcloud==1.9.2
+extra-streamlit-components==0.1.60
+PyJWT==2.8.0
+streamlit-javascript==0.1.5

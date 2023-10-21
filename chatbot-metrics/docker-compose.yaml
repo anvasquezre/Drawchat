@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 8051:8051
+    environment:
+      - CHATBOT_METRICS_STAGE=prod
+      - API_URI=https://chatlog
+      - API_TOKEN=token
